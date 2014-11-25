@@ -102,13 +102,13 @@
         echo '<div class="col-lg-8">';
 
 
-        echo "<p>firstname: $row[owner_fn]</p>";
-        echo "<p>lastname: $row[owner_ln]</p>";
-        echo "<p>title: $row[title]</p>";
-        echo "<p>description: $row[description]</p>";
-        echo "<p>category: $row[category]</p>";
-        echo "<p>target amount: $row[target_amount]</p>";
-        echo "<p>Video link: $row[video]</p><br>";
+        echo "<p><b>First name:</b> $row[owner_fn]</p>";
+        echo "<p><b>Last name:</b> $row[owner_ln]</p>";
+        echo "<p><b>Title:</b> $row[title]</p>";
+        echo "<p><b>Description:</b> $row[description]</p>";
+        echo "<p><b>category:</b> $row[category]</p>";
+        echo "<p><b>Target amount:</b> $row[target_amount]</p>";
+        echo "<p><b>Video link:</b> $row[video]</p><br>";
 
         echo "</div>";
         echo '<div class="col-lg-2">';
