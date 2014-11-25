@@ -34,7 +34,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="index.html">
                         FundAct
                     </a>
                 </li>
@@ -79,11 +79,45 @@
                     </div>
                 </div>
 <?php
-    include ("fundact.php");
+    include_once("fundact.php");
+    include_once("gen.php");
 
     $obj = new fundact();
 
-    $obj->
+    $obj->get_all_projects();
+
+    $row = $obj->fetch();
+
+    if(!$row){
+        echo "{";
+        echo jsonn("result",0). ",";
+        echo jsons("message","unknown command");
+        echo "}";
+    }
+
+    while ($row) {
+        echo '<div class="row">';
+        echo '<div class="col-lg-2">';
+        echo "</div>";
+        echo '<div class="col-lg-8">';
+
+
+        echo "<p>firstname: $row[owner_fn]</p>";
+        echo "<p>lastname: $row[owner_ln]</p>";
+        echo "<p>title: $row[title]</p>";
+        echo "<p>description: $row[description]</p>";
+        echo "<p>category: $row[category]</p>";
+        echo "<p>target amount: $row[target_amount]</p>";
+        echo "<p>Video link: $row[video]</p><br>";
+
+        echo "</div>";
+        echo '<div class="col-lg-2">';
+        echo "</div>";
+        echo "</div>";
+        $row = $obj->fetch();
+
+    }
+
 ?>
 
 
