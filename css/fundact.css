@@ -1,3 +1,35 @@
-.projectTitle{
-	font-size:50%;
+
+.homeBanner{
+	background-color:#008B8B;
+	height:500px;
+	color:#ffffff;
+	text-align: center;
+	padding:5%;
+}
+.homeBanner .title{
+	font-size: 100px;
+	letter-spacing: -2px;
+	line-height: 1;
+	text-shadow: 4px 3px 0px #1d9d74, 9px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.homeBanner .slogan{
+	font-style: italic;
+	font-size: 20px;
+	color:#F0FFFF;
+}
+
+
+
+/*Bootstrap Overwrites*/
+.btn-default {
+	color: #ffffff;
+	background-color: #B2E0E0;
+	border-color: #80cccc;
+}
+.navbar{
+	margin-bottom: 0px;
+}
+.navbar-default {
+	background-color: #ffffff;
+	border-color: #e7e7e7;
 }

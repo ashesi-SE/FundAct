@@ -6,7 +6,7 @@
 	<div class="container"> 
 		<div ng-repeat="project in projects">
 			<div class="row">
-				<div class="projectTitle">{{ project.title }} - By {{ project.firstname + " " + project.lastname}}</div>
+				<div>{{ project.title }} - By {{ project.firstname + " " + project.lastname}}</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4">
