@@ -14,11 +14,11 @@ Todd, a potential donor with keen interest in improving learning among children 
 Patrick, a member of the project screening team of FundAct, wants to maintain a high level of integrity of the projects posted on the FundAct platform. In light of this, he wants to be able to screen every project entry on the FundAct website.
 
 ## The team members
-Carl Yao Agbenyega
-Judah Awentemi Lafia-King
-Edem Anaglo
-Aba Debrah Amissah
-Nanette Mawuena Taylor
+* Carl Yao Agbenyega
+* Judah Awentemi Lafia-King
+* Edem Anaglo
+* Aba Debrah Amissah
+* Nanette Mawuena Taylor
 
 ## The current state of what has been implemented
 
