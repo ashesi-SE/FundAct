@@ -13,6 +13,11 @@
 	width:40%;
 	height:40%;
 }
+.footBanner{
+	background-color: #000000;
+	color: #ffffff;
+	padding: 5%;
+}
 .foundersBlock{
 	text-align: center;
 	background-color:#f5f5f5;
@@ -20,32 +25,28 @@
 	/*padding:5%;*/
 }
 .homeBanner{
-	background-color:#008B8B;
+	/*background-color:#008B8B;*/
+	/*background-image: url("../images/schoolChildren.jpg");*/
 	height:500px;
-	color:#ffffff;
+	color:#000000;
 	text-align: center;
 	padding:5%;
 }
 .homeBanner .title{
-	font-size: 100px;
+	font-size: 700%;
 	letter-spacing: -2px;
 	line-height: 1;
-	text-shadow: 4px 3px 0px #1d9d74, 9px 8px 0px rgba(0, 0, 0, 0.15);
+	text-shadow: 4px 3px 0px #ffffff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+	/*#357ebd*/
 }
 .homeBanner .slogan{
 	font-style: italic;
 	font-size: 20px;
-	color:#F0FFFF;
+	color:#0f0000;
 }
-
 
 
 /*Bootstrap Overwrites*/
-.btn-default {
-	color: #ffffff;
-	background-color: #B2E0E0;
-	border-color: #80cccc;
-}
 .navbar{
 	margin-bottom: 0px;
 }
