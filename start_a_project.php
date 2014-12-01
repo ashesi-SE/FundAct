@@ -1,8 +1,5 @@
 <?php
 	include("header.html");
-	include("fundact.php");
-
-	$obj = new fundact();
 ?>
 
     <div class="container">
@@ -20,8 +17,8 @@
 	        		<div class="modal-body">
 		              <div class="input-group">
 		                <span class="input-group-addon">Name of Social Entreprenuer</span>
-		                <input type="text" name="title" class="form-control" placeholder="First name">
-		                <input type="text" name="title" class="form-control" placeholder="Last name">
+		                <input type="text" name="owner_fn" class="form-control" placeholder="First name">
+		                <input type="text" name="owner_ln" class="form-control" placeholder="Last name">
 		              </div></br>
 		              <div class="input-group">
 		                <span class="input-group-addon">Name of project</span>
@@ -33,24 +30,24 @@
 		              </div></br>
 		              <div class="input-group">
 		                <span class="input-group-addon">Category of project</span>
-		                <input type="text" name="location" class="form-control" placeholder="Category">
+		                <input type="text" name="category" class="form-control" placeholder="Category">
 		              </div></br>
 		              <div class="input-group">
 		                <span class="input-group-addon">Target Amount</span>
-		                <input type="text" name="contact_name" class="form-control" placeholder="Enter your target amount">
+		                <input type="text" name="target_amount" class="form-control" placeholder="Enter your target amount">
 		              </div></br>
 		              <div class="input-group">
 		                <span class="input-group-addon">Location</span>
-		                <input type="text" name="contact_number" class="form-control" placeholder="Project location">
+		                <input type="text" name="location" class="form-control" placeholder="Project location">
 		              </div></br>
 		              <!-- this doesn't have a field in the database yet -->
 		              <div class="input-group">
 		                <span class="input-group-addon">Website (Optional)</span>
-		                <input type="email" name="contact_email" class="form-control" placeholder="URL of your project website">
+		                <input type="text" name="contact_email" class="form-control" placeholder="URL of your project website">
 		              </div></br>
 		              <div class="input-group">
-		                <span class="input-group-addon">Youtube promo video (Optional)</span>
-		                <input type="email" name="contact_email" class="form-control" placeholder="URL of your promo video on youtube">
+		                <span class="input-group-addon">Youtube video (Optional)</span>
+		                <input type="text" name="video" class="form-control" placeholder="URL of your promo video on youtube">
 		              </div></br>
 		              <label for="file"><h4>Select a poster image for your post</h4></label>
 		              <input type="file" name="file" id="file"><br>
@@ -67,6 +64,9 @@
 
 <?php
 	include("footer.html");
+	include("fundact.php");
+
+	$obj = new fundact();
 
 	if(isset($_REQUEST["title"])){
 		$title = $_REQUEST["title"];
@@ -78,7 +78,7 @@
 		$v_url = $_REQUEST["video"];
 
 		//no means of taking in a picture yet ... later
-		if (!$obj->add_projects($owner_fn, $owner_ln, $title, $description, $category, $target_amount, $video)) {
+		if (!$obj->add_projects($owner_fn, $owner_ln, $title, $description, $category, $target_amount, $v_url)) {
 			echo "Error: could not insert into the database";
 			exit();
 		}

@@ -15,7 +15,6 @@
 			 description='$description', category='$category', target_amount='$target_amount', video='$video'";
 		return $this->query($query);
 		}
-
 	}
 ?>
 
