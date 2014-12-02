@@ -17,7 +17,8 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<iframe width="560" height="315" src="//www.youtube.com/embed/eY_mrU8MPfI?list=RDhbnPkK76Ask" frameborder="0" allowfullscreen></iframe>
+					<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/eY_mrU8MPfI?list=RDhbnPkK76Ask" frameborder="0" allowfullscreen></iframe> -->
+					<iframe width="560" height="315" src="//www.youtube.com/embed/{{project.video}}" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
@@ -29,6 +30,16 @@ function projectsController($scope,$http) {
     $http.get("fundact_action.php?function=get-all_projects")
     .success(function(response) {$scope.projects = response;});
 }
+
+var app = angular.module('youtube-videos', []);
+
+angular.module('youtube-videos').directive('youtube', function(){
+	return {
+		scope: 'E',
+		template: 
+	}
+});
+
 </script>
 
 <?php
