@@ -18,7 +18,8 @@
 				</div>
 				<div class="col-md-6">
 					<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/eY_mrU8MPfI?list=RDhbnPkK76Ask" frameborder="0" allowfullscreen></iframe> -->
-					<iframe width="560" height="315" src="//www.youtube.com/embed/{{project.video}}" frameborder="0" allowfullscreen></iframe>
+					<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/{{project.video}}" frameborder="0" allowfullscreen></iframe> -->
+					<youtube code='{{project.video}}'></youtube>
 				</div>
 			</div>
 		</div>
@@ -35,8 +36,9 @@ var app = angular.module('youtube-videos', []);
 
 angular.module('youtube-videos').directive('youtube', function(){
 	return {
-		scope: 'E',
-		template: 
+		restrict: 'EA',
+		scope: {code: '@'},
+		template: '<iframe width="560" height="315" src="//www.youtube.com/embed/{{code}}" frameborder="0" allowfullscreen></iframe>'
 	}
 });
 
