@@ -3,7 +3,7 @@
 ?>
 <!-- <script type="text/javascript">$('.ui.video').video();</script> -->
 <div ng-app="" ng-controller="projectsController">
-	<div class="container">
+	<div class="container bootcards-container">
 		<div class="row">
             <div class="col-lg-12">
                 <div class="title" style="text-align: center">
@@ -44,27 +44,59 @@
   	$row = $obj->get_all_projects();
   	$row = $obj->fetch();
 
+  	$column_count = 0;
+
+		echo '<div class="bootcards-cards">';
+
 	while ($row) {
-		echo '<div class="">';
+		if ($column_count%3 == 0) {
 			echo '<div class="row">';
-				echo '<div>'.$row["title"].' by '.$row["owner_fn"].' '.$row["owner_ln"].'</div>';
-			echo '</div>';
-			echo '<div class="">';
-				echo '<div class="">';
-					echo '<div>';
-						echo '<b>Category: </b>'.$row["category"].'</br>';
-						echo '<b>Target Amount: </b>'.$row["target_amount"].'</br>';
-						echo '<b>Description: </b>'.$row["description"].'</br></br>';
-					echo '</div>';
+		}
+
+		while ($row) {
+				echo '<div class="col-md-4">';
+				?>
+
+				<div class="panel panel-default">
+				  <div class="panel-heading clearfix">
+				    <h3 class="panel-title pull-left"><?php echo '<div>'.$row["title"].' by '.$row["owner_fn"].' '.$row["owner_ln"].'</div>'; ?></h3>
+				      <a class="btn btn-primary pull-right" href="#">
+				        <!-- <i class="fa fa-pencil"></i> -->
+				        Details
+				      </a>
+				    </div>
+				    <div class="list-group">
+				      <div class="list-group-item">
+				        <p class="list-group-item-text">Category</p>
+				        <h4 class="list-group-item-heading"><?php $row["category"]; ?></h4>
+				      </div>
+				      <div class="list-group-item">
+				        <p class="list-group-item-text">Target Amount</p>
+				        <h4 class="list-group-item-heading"><?php $row["target_amount"]; ?></h4>
+				      </div>
+				      <div class="list-group-item">
+				        <p class="list-group-item-text"><?php $row["description"]; ?></p>
+				      </div>
+				    </div>
+				  <div class="panel-footer">
+				    <small>Built with Bootcards - Base Card</small>
+				  </div>
+				</div>
+
+				<?php
+
 				echo '</div>';
-				echo '<div class="">';
-					echo '<div class="ui video" data-source="youtube" data-id="i_mKY2CQ9Kk" data-image="/images/cat.jpg"></div>';
-					// echo '<iframe width="560" height="315" src="//www.youtube.com/embed/eY_mrU8MPfI?list=RDhbnPkK76Ask" frameborder="0" allowfullscreen></iframe>';
-				echo '</div>';
+			$row = $obj->fetch();
+		}
+
+		if ($column_count%3 == 0) {
 			echo '</div>';
-		echo '</div>';
-		$row = $obj->fetch();
+		}
+
+		$column_count++;
+
 	}
+		echo '</div>';
 
 ?>
 
