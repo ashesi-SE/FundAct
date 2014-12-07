@@ -69,7 +69,7 @@
 				        Details
 				      	</a> -->
 				    </div>
-				    <img src="./images/avatar.png" class="img-responsive"/>
+				    <img src="./images/Fundact_logo.png" class="img-responsive"/>
 				    <div class="list-group">
 				    	<div class="list-group-item">
 					        <p class="list-group-item-text">Project Owner</p>
@@ -81,7 +81,7 @@
 						</div>
 						<div class="list-group-item">
 							<p class="list-group-item-text">Target Amount</p>
-							<h4 class="list-group-item-heading"><b><?php echo $row["target_amount"]; ?></b></h4>
+							<h4 class="list-group-item-heading"><i class="glyphicon glyphicon-usd"></i><b><?php echo $row["target_amount"]; ?></b></h4>
 						</div>
 							<div class="list-group-item">
 							<p class="list-group-item-text"><?php echo $row["description"]; ?></p>
@@ -91,10 +91,12 @@
 					    <!-- <small>Built with Bootcards - Base Card</small> -->
 					    <div class="btn-group btn-group-justified">
 							<div class="btn-group">
-								<button class="btn btn-default">
-									<i class="glyphicon glyphicon-usd"></i>
-									Donate
-								</button>
+								<a href="" data-toggle="modal" data-target="#donateModal">
+									<button class="btn btn-default">
+											<i class="glyphicon glyphicon-usd"></i>
+											Donate
+									</button>
+								</a>
 							</div>
 							<!-- <div class="btn-group">
 								<button class="btn btn-default">
@@ -103,10 +105,12 @@
 								</button>
 							</div> -->
 							<div class="btn-group">
-								<button class="btn btn-default">
-									<i class="glyphicon glyphicon-share-alt"></i>
-									Share
-								</button>
+								<a href="" data-toggle="modal" data-target="#shareModal">
+									<button class="btn btn-default">
+										<i class="glyphicon glyphicon-share-alt"></i>
+										Share
+									</button>
+								</a>
 							</div>
 					    </div>
 				    </div>

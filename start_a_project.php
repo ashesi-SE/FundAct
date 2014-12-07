@@ -30,25 +30,32 @@
 		              </div></br>
 		              <div class="input-group">
 		                <span class="input-group-addon">Category of project</span>
-		                <input type="text" name="category" class="form-control" placeholder="Category">
+		                <!-- <input type="text" name="category" class="form-control" placeholder="Category"> -->
+		                <select class="form-control" name="category">
+		                	<option></option>
+							<option>ict tools an apps</option>
+							<option>other creative projects</option>
+							<option>libraries</option>
+							<option>schools and supplies</option>
+						</select>
 		              </div></br>
 		              <div class="input-group">
 		                <span class="input-group-addon">Target Amount</span>
-		                <input type="text" name="target_amount" class="form-control" placeholder="Enter your target amount">
+		                <input type="text" name="target_amount" class="form-control" placeholder="$">
 		              </div></br>
 		              <div class="input-group">
 		                <span class="input-group-addon">Location</span>
-		                <input type="text" name="location" class="form-control" placeholder="Project location">
+		                <input type="text" name="location" class="form-control" placeholder="where are you running your project">
 		              </div></br>
 		              <!-- this doesn't have a field in the database yet -->
-		              <div class="input-group">
+		              <!-- <div class="input-group">
 		                <span class="input-group-addon">Website (Optional)</span>
 		                <input type="text" name="contact_email" class="form-control" placeholder="URL of your project website">
-		              </div></br>
-		              <div class="input-group">
+		              </div></br> -->
+		              <!-- <div class="input-group">
 		                <span class="input-group-addon">Youtube video (Optional)</span>
 		                <input type="text" name="video" class="form-control" placeholder="URL of your promo video on youtube">
-		              </div></br>
+		              </div></br> -->
 		              <label for="file"><h4>Select a poster image for your post</h4></label>
 		              <input type="file" name="file" id="file"><br>
 		              <input type="hidden" id="addTag" name="tag" value="">
