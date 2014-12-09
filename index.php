@@ -21,7 +21,7 @@
 				<div class="col-lg-3"></div>
 				<div class="col-lg-6">
 					<!-- <img src="images/Fundact_logo.png" class="img-responnsive"/> -->
-					<a class="btn btn-primary btn-lg" href="./howitworks.php" role="button">Learn more</a>
+					<!-- <a class="btn btn-primary btn-lg" href="./howitworks.php" role="button">Learn more</a> -->
 				</div>
 				<div class="col-lg-3"></div>
 			</div>
