@@ -17,7 +17,7 @@
 			<div class="row">
 				<div class="col-lg-1"></div>
 				<div class="col-lg-10">
-					<table id="table_id" class="display">
+					<table id="table_id" class="table table-striped table-hover table-bordered">
 					    <thead>
 					        <tr>
 					            <th>Project Title</th>
@@ -27,8 +27,8 @@
 					            <th>Description</th>
 					        </tr>
 					    </thead>
-					    <tbody  ng-repeat="project in projects">
-					        <tr>
+					    <tbody>
+					        <tr  ng-repeat="project in projects">
 					            <td>{{ project.title }}</td>
 					            <td>{{ project.firstname + ' ' + project.lastname }}</td>
 					            <td>{{ project.category }}</td>
@@ -50,6 +50,7 @@ function projectsController($scope,$http) {
     $http.get("fundact_action.php?function=get-all_projects")
     .success(function(response) {$scope.projects = response;});
 }
+
 </script>
 
 <?php

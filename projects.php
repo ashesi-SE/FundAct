@@ -138,10 +138,14 @@
 </div>
 
 <script>
-function projectsController($scope,$http) {
-    $http.get("fundact_action.php?function=get-all_projects")
-    .success(function(response) {$scope.projects = response;});
-}
+	$(document).ready( function () {
+		$("#dataTable").DataTable();
+	} );
+	
+	function projectsController($scope,$http) {
+	    $http.get("fundact_action.php?function=get-all_projects")
+	    .success(function(response) {$scope.projects = response;});
+	}
 </script>
 
 <?php
