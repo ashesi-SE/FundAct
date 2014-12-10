@@ -114,7 +114,11 @@
 						            <td>{{ project.category }}</td>
 						            <td>{{ project.target_amount }}</td>
 						            <td>{{ project.description }}</td>
-						            <td><button type="button" class="btn btn-success">Authenticated</button></td>
+						            <td>
+						            	<a href="" data-toggle="modal" data-target="#frontEndDisplayModal">
+						            		<button type="button" class="btn btn-success" id="verify">Authenticated</button>
+					            		</a>
+						            </td>
 						        </tr>
 						    </tbody>
 						</table>
@@ -136,8 +140,47 @@
 		$("#dataTable").DataTable();
 	} );
 
+	function authenticate(){
+		// if document.getElementById("remove").value == "Remove" {
+		// 	document.getElementById("remove").value = "authenticate";
+		// };
+		// $("#remove").prop("value", "removed");
+
+		// if (document.getElementById("verify").value == "Authenticate") {
+		// 	// document.getElementById("remove").value == "Remove"
+		// 	$("verify").removeClass("btn btn-success").addClass("btn btn-warning");
+		// }else{
+		// 	$("verify").removeClass("btn btn-warning").addClass("btn btn-success");
+		// };
+		
+
+		document.getElementById("verify").className = document.getElementById("verify").className.replace( "btn btn-success", 'btn btn-danger' );
+		document.getElementById("verify").value == "Removed";
+
+	}
+
 
 	</script>
+		<!-- login modal for authenticating the work of social entreprenerus -->
+	<div class="modal fade" id="frontEndDisplayModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Front-End Display Option</h4>
+				</div>
+				<form action="index.php" method="post">
+					<div class="modal-body">
+						<div class="center">
+							<div class="input-group input-group-lg">
+								<button type="button" id="remove" class="btn btn-md btn-primary btn-block"  onclick="authenticate()">Remove</button>
+							</div>
+						</div></br></br>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 		<!-- login modal for social entrepreneurs -->
 	<div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-md">
