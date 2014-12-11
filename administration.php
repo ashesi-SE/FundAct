@@ -108,7 +108,41 @@
 						        </tr>
 						    </thead>
 						    <tbody>
-						        <tr  ng-repeat="project in projects">
+<?php
+include("fundact.php");
+
+$projects = new fundact();
+
+$projects->get_all_projects();
+
+if (!$row = $projects->fetch()){
+    echo "Error: could not display projects";
+}
+while ($row) {
+	# code...
+
+?>
+
+        <tr>
+            <td><?php echo $row["title"] ?></td>
+            <td><?php echo $row["owner_fn"].' '.$row["owner_ln"]; ?></td>
+            <td><?php echo $row["category"]; ?></td>
+            <td><?php echo $row["target_amount"]; ?></td>
+            <td><?php echo $row["description"]; ?></td>
+            <td>
+                <a href="" data-toggle="modal" data-target="#frontEndDisplayModal">
+                    <button type="button" class="btn btn-success" id="verify">Authenticated</button>
+                </a>
+            </td>
+        </tr>
+
+<?php
+	$row = $projects->fetch();
+}
+?>
+<!--
+								Angularjs table code
+                                <tr  ng-repeat="project in projects">
 						            <td>{{ project.title }}</td>
 						            <td>{{ project.firstname + ' ' + project.lastname }}</td>
 						            <td>{{ project.category }}</td>
@@ -120,6 +154,7 @@
 					            		</a>
 						            </td>
 						        </tr>
+-->
 						    </tbody>
 						</table>
 					</div>
