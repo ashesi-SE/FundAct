@@ -15,6 +15,10 @@
 }
 .footBanner{
 	background-color: #548235;
+	/*position: fixed;*/
+	width: 100%;
+	bottom: 0;
+	height: 10px;
 	color: #ffffff;
 	padding: 5%;
 }

@@ -27,6 +27,12 @@
 
 		function authenticate($project_id, $new_status){
 			$query = "UPDATE projects SET status='$new_status' WHERE pid = '$project_id'";
+			return $this->query($query);
+		}
+
+		function select_owner_projects($user_id){
+			$query = "SELECT * FROM projects WHERE uid = '$user_id'";
+			return $this->query($query);
 		}
 	}
 ?>
