@@ -1,4 +1,0 @@
-FundAct colors
-
-#4472C4 - blue
-#548235 - green
