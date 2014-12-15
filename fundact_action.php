@@ -17,14 +17,7 @@
     	echo ("\"description\":\"".$row["description"]."\",");
       echo ("\"category\":\"".$row["category"]."\",");
       echo ("\"target_amount\":\"".$row["target_amount"]."\",");
-      $v = explode("=", $row["video"]);
-
-      if (! isset($v[1])) {
-        $v[1] = null;
-      }
-
-    	echo ("\"video\":\"".$v[1]."\"");
-      // "//www.youtube.com/embed/".
+    	echo ("\"video\":\"".$row["video"]."\"");
     	echo("}");
     	$row = $obj->fetch();
       if ($row){

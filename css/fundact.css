@@ -1,76 +1,35 @@
-.aboutFounder{
-	text-align: center;
-	display: block;
-	padding: 4px;
-	margin-bottom: 20px;
-	line-height: 1.42857143;
-	/*background-color: #fff;*/
-	/*border: 1px solid #ddd;*/
-	border-radius: 4px;
-	transition: all .2s ease-in-out;
-}
-.aboutFounder img{
-	width:40%;
-	height:40%;
-}
-.footBanner{
-	background-color: #548235;
-	color: #ffffff;
-	padding: 5%;
-}
-.foundersBlock{
-	text-align: center;
-	background-color:#f5f5f5;
-	color:#6a6a6a;
-	/*padding:5%;*/
-}
+
 .homeBanner{
-	/*background-color:#008B8B;*/
-	/*background-image: url("../images/schoolChildren.jpg");*/
+	background-color:#008B8B;
 	height:500px;
-	color:#000000;
+	color:#ffffff;
 	text-align: center;
 	padding:5%;
 }
 .homeBanner .title{
-	font-size: 700%;
+	font-size: 100px;
 	letter-spacing: -2px;
 	line-height: 1;
-	text-shadow: 4px 3px 0px #ffffff, 9px 8px 0px rgba(0, 0, 0, 0.15);
-	/*#357ebd*/
+	text-shadow: 4px 3px 0px #1d9d74, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 .homeBanner .slogan{
 	font-style: italic;
 	font-size: 20px;
-	color:#0f0000;
+	color:#F0FFFF;
 }
 
 
+
 /*Bootstrap Overwrites*/
+.btn-default {
+	color: #ffffff;
+	background-color: #B2E0E0;
+	border-color: #80cccc;
+}
 .navbar{
 	margin-bottom: 0px;
 }
 .navbar-default {
-	/*background-color: #4169E1;*/
+	background-color: #ffffff;
 	border-color: #e7e7e7;
-	/*color: #ffffff;*/
-}
-.navbar-nav{
-	color: #ffffff;
-}
-
-.cards{
-	margin: 1em 3em 0;
-}
-.text{
-	font-style: bold;
-	font-size: 20px;
-	font-family: "Georgia", arial;
-}
-.title{
-	font-weight: 
-}
-
-.description {
-  min-height: 35px;
 }

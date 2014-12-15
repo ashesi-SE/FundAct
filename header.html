@@ -18,27 +18,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/fundact.css">
-
-    <!-- BootCards -->
-    <link rel="stylesheet" type="text/css" href="css/bootcards.css">
-    <script src="js/bootcards.js"></script>
-     <link rel="stylesheet" type="text/css" href="components/card.min.css">
-
-    <!-- Angular -->
     <script src="js/angular.js"></script>
-
-    <!-- Social media sharing using sharethis.com -->
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "ur-a9d72796-c930-dd9a-e572-cbfa27149373", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-
-    <!-- DataTables CSS-->
-    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
-  
-    <!-- jQuery -->
-    <!-- <script type="text/javascript" charset="utf8" src="js/jquery.js"></script> -->
-      
-    <!-- DataTables -->
-    <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.js"></script>
 
   </head>
   <body>
@@ -53,15 +33,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./index.php"><i class="fa fa-home fa-lg"></i><!-- <img src="./images/FundAct_logo.png" class="img-responsive"/> --></a>
+          <a class="navbar-brand" href="#home"><i class="fa fa-home fa-lg"></i></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="title"><a href="./projects.php">Donate to a project</a></li>
-            <li><a href="./start_a_project.php">Start a project</a></li>
-            <li><a href="./howitworks.php">How it works</a></li>
+            <li><a href="#About us">About us <span class="sr-only">(current)</span></a></li>
+            <li><a href="#How it works">How it works</a></li>
+            <li><a href="#Start project">Start a project</a></li>
           </ul>
           <!-- <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
@@ -70,13 +50,8 @@
             <button type="submit" class="btn btn-default">Submit</button>
           </form> -->
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="" data-toggle="modal" data-target="#signUpModal">Sign up</a></li>
-            <li><a href="" data-toggle="modal" data-target="#logInModal">Log in</a></li>
-            <li>
-              <a href="" data-toggle="#" data-target="#"><span class="glyphicon glyphicon-search" aria-hidden="true">
-                </span> <input type="text" ng-model="searchItem" placeholder="Search projects">
-              </a>
-            </li>
+            <li><a href="#Sign up">Sign up</a></li>
+            <li><a href="#Log in">Log in</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
