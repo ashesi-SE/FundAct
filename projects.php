@@ -69,12 +69,20 @@
 				        Details
 				      	</a> -->
 				    </div>
-				    <img src="./images/Fundact_logo.png" class="img-responsive"/>
+				    <?php 
+				    if ($row["pictures"] != null) {
+				    	echo "<img src='".$row["pictures"]."' class=\"img-responsive\"/>"; 
+				    }else{
+				    	echo "<img src='./images/defaultProjectPicture.jpg' class=\"img-responsive\"/>";
+				    }
+				    
+				    ?>
+				    
 				    <div class="list-group">
-				    	<div class="list-group-item">
-					        <p class="list-group-item-text">Project Owner</p>
-					        <h4 class="list-group-item-heading"><b><?php echo $row["owner_fn"].' '.$row["owner_ln"]; ?></b></h4>
-				      	</div>
+				    	<!-- <div class="list-group-item"> -->
+					        <!-- <p class="list-group-item-text">Project Owner</p> -->
+					        <!-- <h4 class="list-group-item-heading"><b><?php //echo $row["fname"].' '.$row["lname"]; ?></b></h4> -->
+				      	<!-- </div> -->
 						<div class="list-group-item">
 							<p class="list-group-item-text">Category</p>
 							<h4 class="list-group-item-heading"><b><?php echo $row["category"]; ?></b></h4>
@@ -138,10 +146,6 @@
 </div>
 
 <script>
-	$(document).ready( function () {
-		$("#dataTable").DataTable();
-	} );
-	
 	function projectsController($scope,$http) {
 	    $http.get("fundact_action.php?function=get-all_projects")
 	    .success(function(response) {$scope.projects = response;});

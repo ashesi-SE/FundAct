@@ -82,7 +82,7 @@
     </nav>
 
 	<div ng-app="" ng-controller="projectsController">
-		<!-- <div class="container bootcards-container"> -->
+		<div class="container bootcards-container">
 			<div class="row">
 	            <div class="col-lg-12">
 	                <div class="title" style="text-align: center">
@@ -100,7 +100,7 @@
 						    <thead>
 						        <tr>
 						            <th>Project Title</th>
-						            <th>Social Entrepreneur</th>
+						            <!-- <th>Social Entrepreneur</th> -->
 						            <th>Category</th>
 						            <th>Target Amount</th>
 						            <th>Description</th>
@@ -125,7 +125,7 @@ while ($row) {
 
         <tr>
             <td><?php echo $row["title"] ?></td>
-            <td><?php echo $row["owner_fn"].' '.$row["owner_ln"]; ?></td>
+            <!-- <td><?php echo $row["owner_fn"].' '.$row["owner_ln"]; ?></td> -->
             <td><?php echo $row["category"]; ?></td>
             <td><?php echo $row["target_amount"]; ?></td>
             <td><?php echo $row["description"]; ?></td>
@@ -162,7 +162,7 @@ while ($row) {
 				</div>
 			<!-- </div> -->
 
-		<!-- </div> -->
+		</div>
 	</div>
 
 	<script>
