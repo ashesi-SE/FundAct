@@ -82,6 +82,7 @@
 		$description = $_REQUEST["description"];
 		$category = $_REQUEST["category"];
 		$target_amount = $_REQUEST["target_amount"];
+		$image_path = null;
 		
 		if (isset($_REQUEST["video"])) {
 			$v_url = $_REQUEST["video"];
@@ -89,36 +90,36 @@
 			$v_url = null;
 		}
 
-		$allowedExts = array("gif", "jpeg", "jpg", "png");
-        $temp = explode(".", $_FILES["file"]["name"]);
-        $extension = end($temp);
+		// $allowedExts = array("gif", "jpeg", "jpg", "png");
+  //       $temp = explode(".", $_FILES["file"]["name"]);
+  //       $extension = end($temp);
 
-        if  ((
-              ($_FILES["file"]["type"] == "image/gif")
-              || ($_FILES["file"]["type"] == "image/jpeg")
-              || ($_FILES["file"]["type"] == "image/jpg")
-              || ($_FILES["file"]["type"] == "image/pjpeg")
-              || ($_FILES["file"]["type"] == "image/x-png")
-              || ($_FILES["file"]["type"] == "image/png")
-            )
-            && in_array($extension, $allowedExts))
-        {
-			if ($_FILES["file"]["error"] > 0) {
-				echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
-			}
-			else {
-				if (file_exists("upload/" . $_FILES["file"]["name"])) {
-			  		echo $_FILES["file"]["name"] . " already exists. ";
-				} else {
-				  move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
-				  echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
-				  $image_path = "upload/" . $_FILES["file"]["name"];
-				}
-			}
-        }
-        else {
-          echo "Invalid file";
-        }
+  //       if  ((
+  //             ($_FILES["file"]["type"] == "image/gif")
+  //             || ($_FILES["file"]["type"] == "image/jpeg")
+  //             || ($_FILES["file"]["type"] == "image/jpg")
+  //             || ($_FILES["file"]["type"] == "image/pjpeg")
+  //             || ($_FILES["file"]["type"] == "image/x-png")
+  //             || ($_FILES["file"]["type"] == "image/png")
+  //           )
+  //           && in_array($extension, $allowedExts))
+  //       {
+		// 	if ($_FILES["file"]["error"] > 0) {
+		// 		echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+		// 	}
+		// 	else {
+		// 		if (file_exists("upload/" . $_FILES["file"]["name"])) {
+		// 	  		echo $_FILES["file"]["name"] . " already exists. ";
+		// 		} else {
+		// 		  move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
+		// 		  echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+		// 		  $image_path = "upload/" . $_FILES["file"]["name"];
+		// 		}
+		// 	}
+  //       }
+  //       else {
+  //         echo "Invalid file";
+  //       }
 
 		//no means of taking in a picture yet ... later
 		if (!$obj->add_projects($owner_fn, $owner_ln, $title, $description, $category, $target_amount, $image_path, $v_url)) {
