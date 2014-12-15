@@ -15,6 +15,11 @@
 			return $this->query($query);
 		}
 
+		function get_project_owners($user_id){
+			$query = "SELECT fname, lname FROM users, projects WHERE users.uid == projects.uid";
+			return $this->$query($query);
+		}
+
 		function get_number_of_projects(){
 			$query = "SELECT count(*) FROM projects";
 			return $this->query($query);
